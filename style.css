@@ -115,6 +115,7 @@ a {
 }
 .service-about-center {
   display: flex;
+  align-items: center;
 }
 .services-about {
   height: 50vh;
@@ -386,8 +387,10 @@ a {
   border: 5px solid white;
   border-radius: 15px;
   height: 35vh;
-  width: 50%;
+  width: 65vw;
   background-color: rgb(79, 81, 81);
+  text-align: center;
+
 }
 
 .testimonial-card > div > img {
@@ -595,8 +598,9 @@ footer {
     margin-right: auto;
   }
   .card {
-    width: 60%;
+    width: 30vh;
     margin: 20px auto;
+    height: 33vh;
   }
   .testimonial {
     height: 100vh;
@@ -606,6 +610,12 @@ footer {
     justify-items: center;
     align-items: center;
   }
+  .testimonial-heading>h1>span{
+    word-break: break-word;
+  }
+  .testimonial-card{
+    width: 100%;
+  }
 
   .contact {
     height: 100vh;
@@ -614,5 +624,16 @@ footer {
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
+  }
+  .contact-form{
+    width: 85%;
+  }
+  .contact-form > form{
+    width: 90%;
+  }
+
+
+  footer{
+    height: 20vh;
   }
 }
