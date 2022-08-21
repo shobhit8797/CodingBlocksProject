@@ -1,0 +1,441 @@
+:root {
+  --color-orange: orange;
+  --lin-gradient: linear-gradient(rgb(246, 246, 75), rgb(255, 166, 0));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.btn {
+  background-image: var(--lin-gradient);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.container {
+  width: 90%;
+  margin: 0px auto;
+  color: white;
+}
+
+.navbar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.nav-items > ul {
+  display: flex;
+  list-style: none;
+}
+.nav-links {
+  margin: 0px 15px;
+}
+
+/* Home Section */
+.home-section {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr min-content;
+  justify-items: center;
+  align-items: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50vh;
+}
+.intro > h1,
+.services-about > h1,
+.interested-about > h1,
+.portfolio-heading > h1,
+.testimonial-heading > h1,
+.contact-heading > h1 {
+  font-size: 4rem;
+}
+
+.intro > h1 > span,
+.services-about > h1 > span,
+.interested-about > h1 > span,
+.portfolio-heading > h1 > span,
+.testimonial-heading > h1 > span,
+.contact-heading > h1 > span {
+  color: var(--color-orange);
+}
+.intro > p {
+  color: rgb(148, 147, 147);
+}
+
+.profile-image > img {
+  height: 60vh;
+  width: 50vh;
+  border-radius: 50%;
+}
+.social-link {
+  width: 100%;
+  display: flex;
+  justify-items: start;
+  /* grid-column: 1/3; */
+}
+.social-link > i {
+  font-size: 2.5rem;
+  display: block;
+  margin: 0px 20px 5px;
+  color: var(--color-orange);
+}
+
+/* Services Section */
+
+.services {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.services-about {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.service-cards {
+  position: relative;
+}
+.service-card {
+  position: absolute;
+  color: black;
+  height: 40vh;
+  width: 22vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#service-card-1 {
+  top: 0;
+  left: 30%;
+}
+
+#service-card-2 {
+  top: 40%;
+  left: -20%;
+}
+#service-card-3 {
+  top: 50%;
+  left: 40%;
+}
+
+.service-card-content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30vh;
+  width: 22vh;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.service-card-content > div {
+  text-align: center;
+}
+.service-card-content > div > span {
+  font-size: 3rem;
+}
+.learn-more-btn {
+  background-color: white;
+  color: rgb(88, 154, 176);
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+/* Interested Section */
+.interested {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.interested-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 55vh;
+}
+
+.brand-icons {
+  position: relative;
+  height: 350px;
+  width: 350px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 0;
+}
+.brand-icon {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid grey;
+  border-radius: 50%;
+  z-index: 1;
+}
+#brand-icon-1 {
+  background-image: url(./amazon-logo.png);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+#brand-icon-2 {
+  background-image: url(./upwork-logo.png);
+  top: -15%;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+#brand-icon-3 {
+  background-image: url(./shopify-logo.png);
+  top: 0;
+  bottom: 0;
+  right: -15%;
+  margin: auto;
+}
+#brand-icon-4 {
+  background-image: url(./facebook-logo.png);
+  bottom: -15%;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+#brand-icon-5 {
+  background-image: url(./fiverr-logo.png);
+  top: 0;
+  bottom: 0;
+  left: -15%;
+  margin: auto;
+}
+#blue-bg {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  background-color: blue;
+  border-radius: 50%;
+  top: -10%;
+  right: -20%;
+  z-index: -1;
+}
+#yellow-bg {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  background-color: yellow;
+  border-radius: 50%;
+  bottom: -10%;
+  right: -20%;
+  z-index: -1;
+}
+
+/* Portfolio Section */
+
+.portfolio {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.portfolio-heading {
+  align-items: center;
+}
+
+.project-cards {
+  display: flex;
+  flex-direction: row;
+}
+.card {
+  background-color: rgb(78, 85, 87);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 35vh;
+}
+.card:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card > p {
+  word-wrap: break-word;
+}
+
+/* Testimonial Section */
+
+.testimonial {
+  display: flex;
+  height: 70vh;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 5px solid white;
+  border-radius: 15px;
+  height: 35vh;
+  width: 50%;
+  background-color: rgb(79, 81, 81);
+}
+
+.testimonial-card > div > img {
+  height: 75px;
+  width: 80px;
+  border-radius: 50%;
+}
+.testimonial-card > p {
+  color: var(--color-orange);
+}
+.testimonial-card > p > span {
+  color: white;
+}
+
+/* contact */
+
+.contact {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.contact-form {
+  width: 100%;
+}
+.contact-form > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  background: url(./wave.svg);
+  background-size: 100vw 50vh;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+    margin: 0px auto;
+    color: white;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .home-section {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .intro {
+    height: 45vh;
+  }
+  .intro > h1,
+  .services-about > h1,
+  .interested-about > h1,
+  .portfolio-heading > h1,
+  .testimonial-heading > h1,
+  .contact-heading > h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile-image {
+    width: 100%;
+  }
+  .profile-image > img {
+    height: 35vh;
+    width: 95%;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  .services {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .interested {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .service-cards {
+    position: initial;
+  }
+
+  .portfolio {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .project-cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .contact {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+}
