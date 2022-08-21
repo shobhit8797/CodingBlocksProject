@@ -1,6 +1,7 @@
 :root {
   --color-orange: orange;
   --lin-gradient: linear-gradient(rgb(246, 246, 75), rgb(255, 166, 0));
+  --view-btn: rgb(10, 32, 10);
 }
 
 * {
@@ -34,8 +35,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
 }
 
 .nav-items > ul {
@@ -79,7 +80,12 @@ a {
 .contact-heading > h1 > span {
   color: var(--color-orange);
 }
-.intro > p {
+.intro > p,
+.services-about > p,
+.interested-about > p,
+.portfolio-heading > p,
+.testimonial-heading > p,
+.contact-heading > p {
   color: rgb(148, 147, 147);
 }
 
@@ -92,7 +98,6 @@ a {
   width: 100%;
   display: flex;
   justify-items: start;
-  /* grid-column: 1/3; */
 }
 .social-link > i {
   font-size: 2.5rem;
@@ -107,6 +112,11 @@ a {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+.service-about-center {
+  display: flex;
+  /* align-items: center; */
+  top: 40%;
 }
 .services-about {
   height: 50vh;
@@ -134,7 +144,7 @@ a {
 }
 
 #service-card-2 {
-  top: 40%;
+  top: 60%;
   left: -20%;
 }
 #service-card-3 {
@@ -163,6 +173,39 @@ a {
   color: rgb(88, 154, 176);
   padding: 10px 5px;
   border-radius: 5px;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.stat-indi {
+  display: flex;
+  height: 22vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.stat-count {
+  font-size: 2rem;
+  display: flex;
+  width: 10vh;
+  height: 10vh;
+  background-color: white;
+  color: var(--color-orange);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.stat-indi > p:last-child {
+  color: var(--color-orange);
 }
 
 /* Interested Section */
@@ -268,7 +311,7 @@ a {
   justify-content: space-around;
 }
 .portfolio-heading {
-  align-items: center;
+  text-align: center;
 }
 
 .project-cards {
@@ -282,6 +325,10 @@ a {
   justify-content: space-around;
   align-items: center;
   height: 35vh;
+  transition: transform 1s;
+  border-radius: 15px;
+  border-left: lightgray solid 1px;
+  border-top: lightgray solid 1px;
 }
 .card:not(:last-child) {
   margin-right: 10px;
@@ -290,14 +337,47 @@ a {
 .card > p {
   word-wrap: break-word;
 }
+@keyframes translateUp {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.card:hover {
+  /* animation: translateUp 1s ease; */
+  transform: translate(0px, -10px);
+}
+
+.view-btn {
+  background-color: var(--view-btn);
+  color: white;
+  box-shadow: greenyellow -1px 1px 0px 1px;
+  padding: 10px 25px;
+  border-radius: 15px;
+
+  border: none;
+}
+@keyframes btn {
+  0% {
+    box-shadow: greenyellow -1px 1px 0px 1px;
+  }
+  100% {
+    box-shadow: greenyellow 1px -1px 0px 1px;
+  }
+}
+.view-btn:hover {
+  border: none;
+  animation: btn 0.5s ease;
+  animation-fill-mode: forwards;
+}
 
 /* Testimonial Section */
 
 .testimonial {
   display: flex;
-  height: 70vh;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
 .testimonial-card {
   display: flex;
@@ -330,21 +410,49 @@ a {
   height: 100vh;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-items: center;
 }
-.contact-form {
+/* .contact-form {
   width: 100%;
-}
+} */
 .contact-form > form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
+  height: 50vh;
+  margin: auto;
+  justify-content: space-evenly;
 }
 
-.footer {
-  background: url(./wave.svg);
-  background-size: 100vw 50vh;
+.contact-form > form :not(:last-child) {
+  width: 100%;
 }
+
+.contact-form > form >input,textarea {
+  padding: 15px 10px; 
+  border: var(--color-orange) solid 2px;
+  border-radius: 10px;
+}
+.footer{
+  background: url(./waves1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20vh;
+}
+footer {
+  height: 30vh;
+  background-color: #FCB900;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.footer-social-link>i{
+  font-size: 3rem;
+  margin: 30px 20px 0px;
+}
+
 
 @media screen and (max-width: 480px) {
   .container {
