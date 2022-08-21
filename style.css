@@ -115,8 +115,6 @@ a {
 }
 .service-about-center {
   display: flex;
-  /* align-items: center; */
-  top: 40%;
 }
 .services-about {
   height: 50vh;
@@ -226,16 +224,15 @@ a {
 
 .brand-icons {
   position: relative;
-  height: 350px;
-  width: 350px;
+  height: 25vw;
+  width: 25vw;
   background-color: white;
   border-radius: 50%;
-  z-index: 0;
 }
 .brand-icon {
   position: absolute;
-  height: 100px;
-  width: 100px;
+  height: 7vw;
+  width: 7vw;
   background-color: white;
   background-size: cover;
   background-position: center;
@@ -282,22 +279,22 @@ a {
 }
 #blue-bg {
   position: absolute;
-  height: 250px;
-  width: 250px;
+  height: 20vw;
+  width: 20vw;
   background-color: blue;
   border-radius: 50%;
   top: -10%;
-  right: -20%;
+  right: -17%;
   z-index: -1;
 }
 #yellow-bg {
   position: absolute;
-  height: 250px;
-  width: 250px;
+  height: 20vw;
+  width: 20vw;
   background-color: yellow;
   border-radius: 50%;
   bottom: -10%;
-  right: -20%;
+  right: -17%;
   z-index: -1;
 }
 
@@ -428,12 +425,13 @@ a {
   width: 100%;
 }
 
-.contact-form > form >input,textarea {
-  padding: 15px 10px; 
+.contact-form > form > input,
+textarea {
+  padding: 15px 10px;
   border: var(--color-orange) solid 2px;
   border-radius: 10px;
 }
-.footer{
+.footer {
   background: url(./waves1.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -442,19 +440,18 @@ a {
 }
 footer {
   height: 30vh;
-  background-color: #FCB900;
+  background-color: #fcb900;
   display: flex;
   justify-content: center;
   color: white;
   text-align: center;
 }
-.footer-social-link>i{
+.footer-social-link > i {
   font-size: 3rem;
   margin: 30px 20px 0px;
 }
 
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
   .container {
     width: 90%;
     margin: 0px auto;
@@ -468,13 +465,11 @@ footer {
   .home-section {
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 1fr 0.5fr;
+    /* grid-template-rows: 100vh 100vh 10vh; */
+    grid-template-rows: 2fr 2fr 0.5fr;
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
-  }
-  .intro {
-    height: 45vh;
   }
   .intro > h1,
   .services-about > h1,
@@ -482,7 +477,16 @@ footer {
   .portfolio-heading > h1,
   .testimonial-heading > h1,
   .contact-heading > h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+  }
+
+  .intro > h1 > span,
+  .services-about > h1 > span,
+  .interested-about > h1 > span,
+  .portfolio-heading > h1 > span,
+  .testimonial-heading > h1 > span,
+  .contact-heading > h1 > span {
+    word-break: break-all;
   }
 
   .profile-image {
@@ -496,7 +500,59 @@ footer {
     display: block;
   }
   .services {
-    height: 100vh;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .services-about {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.service-card-content > div
+{
+  margin: 5px 10px;
+}
+
+  .service-cards {
+    height: 110vh;
+    position: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .service-card{
+    position: initial;
+    color: black;
+    height: 33vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .service-card-content{
+    width: 100%;
+  }
+
+  .stats{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .interested {
+    height: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
@@ -504,13 +560,18 @@ footer {
     align-items: center;
   }
 
-  .interested {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
+  .brand-icons {
+    width: 60vw;
+    height: 60vw;
+  }
+  .brand-icon {
+    width: 20vw;
+    height: 20vw;
+  }
+  #blue-bg,
+  #yellow-bg {
+    width: 45vw;
+    height: 45vw;
   }
   .service-cards {
     position: initial;
