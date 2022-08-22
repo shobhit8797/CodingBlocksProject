@@ -1,7 +1,7 @@
 :root {
   --color-orange: orange;
   --lin-gradient: linear-gradient(rgb(246, 246, 75), rgb(255, 166, 0));
-  --view-btn: rgb(10, 32, 10);
+  --view-btn: rgb(11, 23, 11);
 }
 
 * {
@@ -18,7 +18,10 @@ body {
   color: white;
   padding: 10px 30px;
   border-radius: 20px;
+  box-shadow: orange 0px 5px 30px 0px;
+  border: none;
 }
+
 a {
   text-decoration: none;
   color: white;
@@ -317,7 +320,7 @@ a {
   flex-direction: row;
 }
 .card {
-  background-color: rgb(78, 85, 87);
+  background-color: rgb(22, 28, 22);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -350,18 +353,17 @@ a {
 .view-btn {
   background-color: var(--view-btn);
   color: white;
-  box-shadow: greenyellow -1px 1px 0px 1px;
+  box-shadow: rgb(110, 255, 0) -1px 1px 0px 1px;
   padding: 10px 25px;
   border-radius: 15px;
-
   border: none;
 }
 @keyframes btn {
   0% {
-    box-shadow: greenyellow -1px 1px 0px 1px;
+    box-shadow: rgb(110, 255, 0) -1px 1px 0px 1px;
   }
   100% {
-    box-shadow: greenyellow 1px -1px 0px 1px;
+    box-shadow: rgb(110, 255, 0) 1px -1px 0px 1px;
   }
 }
 .view-btn:hover {
@@ -390,12 +392,11 @@ a {
   width: 65vw;
   background-color: rgb(79, 81, 81);
   text-align: center;
-
 }
 
 .testimonial-card > div > img {
-  height: 75px;
-  width: 80px;
+  height: 14vh;
+  width: 16vh;
   border-radius: 50%;
 }
 .testimonial-card > p {
@@ -403,6 +404,11 @@ a {
 }
 .testimonial-card > p > span {
   color: white;
+}
+.visit-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: solid 1px white;
 }
 
 /* contact */
@@ -610,10 +616,10 @@ footer {
     justify-items: center;
     align-items: center;
   }
-  .testimonial-heading>h1>span{
+  .testimonial-heading > h1 > span {
     word-break: break-word;
   }
-  .testimonial-card{
+  .testimonial-card {
     width: 100%;
   }
 
@@ -625,15 +631,14 @@ footer {
     justify-items: center;
     align-items: center;
   }
-  .contact-form{
+  .contact-form {
     width: 85%;
   }
-  .contact-form > form{
+  .contact-form > form {
     width: 90%;
   }
 
-
-  footer{
+  footer {
     height: 20vh;
   }
 }
