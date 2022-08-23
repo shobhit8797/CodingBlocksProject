@@ -252,6 +252,7 @@ a {
   border: 1px solid grey;
   border-radius: 50%;
   z-index: 1;
+  box-shadow: grey 0px 0px 10px 1px;
 }
 #brand-icon-1 {
   background-image: url(./amazon-logo.png);
