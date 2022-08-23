@@ -22,6 +22,14 @@ body {
   border: none;
 }
 
+.btn:hover
+{
+  background-image: none;
+  background-color: white;
+  color: orange;
+}
+
+
 a {
   text-decoration: none;
   color: white;
