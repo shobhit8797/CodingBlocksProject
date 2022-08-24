@@ -73,10 +73,10 @@ a:hover{
 }
 @keyframes toggle-animation {
   0%{left: 0;}
-  100%{right: 0;}  
+  100%{left: 57%;}  
 }
 .toggle-btn:hover .toggle-circle{
-  animation: toggle-animation 1s ease;
+  animation: toggle-animation 2s ease forwards;
 }
 
 .nav-items > ul {
@@ -178,27 +178,44 @@ a:hover{
   justify-content: space-evenly;
 }
 
-@keyframes service-right-l20 {
-  /* 0%{left: 20%;right: 80%;} */
-  0%{left: 80%;right: 0%;}
-  100%{left: 20%;right: 80%;}  
+@keyframes service-card-1 {
+  0%{
+    /* left: 80%; */
+    right: 0%;}
+  100%{
+    /* left: 20%; */
+    right: 70%;}  
 }
+@keyframes service-card-2 {
+  0%{left: -100%;}
+  100%{left: -20%;}
+}
+@keyframes service-card-3 {
+  0%{
+    /* left: 80%; */
+    right: 0%;}
+  100%{
+    /* left: 55%; */
+    right: 30%;}  
+}
+
 
 #service-card-1 {
   top: 20%;
   right: 0;
-  animation: service-right-l20 5s ease 1s forwards;
+  animation: service-card-1 5s ease 1s forwards;
 }
 
 #service-card-2 {
   top: 60%;
-  left: -20%;
-  animation: service-left-l20 5s ease 1s forwards;
+  left: -100%;
+  animation: service-card-2 5s ease 1s forwards;
 }
 #service-card-3 {
   top: 55%;
-  left: 60%;
-  animation: service-right-l20 5s ease 1s forwards;
+  /* left: 60%; */
+  right: 0;
+  animation: service-card-3 5s ease 1s forwards;
 }
 
 .service-card-content {
@@ -222,6 +239,7 @@ a:hover{
   color: rgb(88, 154, 176);
   padding: 10px 5px;
   border-radius: 5px;
+  cursor: pointer;;
 }
 .learn-more-btn:hover{
   transform: scale(1.2);
